@@ -4,37 +4,37 @@
             "title": "Minecraft",
             "rating": 8,
             "review": "A game of endless exploration and creativity",
-            "url": "https://en.wikipedia.org/wiki/File:Minecraft_cover.png"
+            "url": "images/Minecraft_cover.png"
         },
         {
             "title": "Helldivers 2",
             "rating": 10,
             "review": "This review has been redacted",
-            "url": "https://en.wikipedia.org/wiki/File:Helldivers2cover.png"
+            "url": "images/Helldivers2cover.png"
         },
         {
             "title": "Persona 3: Reload",
             "rating": 9,
             "review": "Dramatic RPG and Life Sim hybrid",
-            "url": "https://en.wikipedia.org/wiki/File:Persona_3_Reload_box_art.jpg"
+            "url": "images/Persona_3_Reload_box_art.jpg"
         },
         {
           "title": "Hades",
           "rating": 8.5,
           "review": "Fast paced Rogue-Lite with lots to do",
-          "url": "https://en.wikipedia.org/wiki/File:Hades_cover_art.jpg"
+          "url": "images/Hades_cover_art.jpg"
         },
         {
             "title": "Fallout 4",
             "rating": 7,
             "review": "A gritty survival rpg set in the post apocalypse",
-            "url": "https://en.wikipedia.org/wiki/File:Fallout_4_cover_art.jpg"
+            "url": "images/Fallout_4_cover_art.jpg"
         },
         {
             "title": "Terraria",
             "rating": 9.5,
             "review": "A great game of journey and exploration filled with amazing bosses",
-            "url": "https://en.wikipedia.org/wiki/File:Terraria_Steam_artwork.jpg"
+            "url": "images/Terraria_Steam_artwork.jpg"
         }
     ]
   }
