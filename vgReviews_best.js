@@ -9,41 +9,29 @@ fetch("./vgReviews.json")
 .then(myReviews => loadReviews(myReviews));
 
 function loadReviews(myReviews){
-    var mainContainer = document.getElementById("reviews");
-    let spot1 = document.createElement("div");
+    let title1 = document.getElementById("title1");
+    let img1 = document.getElementById("img1");
+    let title2 = document.getElementById("title2");
+    let img2 = document.getElementById("img2");
     let rate1 = 0;
-    let spot2 = document.createElement("div");
     let rate2 = 0;
 
     for (let i=0; i<myReviews.reviews.length; i++){
         let title = myReviews.reviews[i].title;
-        let year = myReviews.reviews[i].year;
-        let review = myReviews.reviews[i].review;
         let rating = myReviews.reviews[i].rating;
         let url = myReviews.reviews[i].url;
 
         if(rating > rate1 && rating > rate2){
-            spot2.innerHTML = spot1.innerHTML;
             rate2 = rate1;
+            img2.src=img1.src;
+            title2.innerText= title1.innerText;
             rate1 = rating;
-            spot1.innerHTML = `
-            <h3>${title}</h3>
-            <p>${year}</p>
-            <img src=${url} width = "200" />
-            <p>${rating} / 10</p>
-            <p>${review}</p>
-            `;
+            img1.src=`${url}`;
+            title1.innerText= `${title}`;
         }else if(rating > rate2){
             rate2 = rating;
-            spot2.innerHTML = `
-            <h3>${title}</h3>
-            <p>${year}</p>
-            <img src=${url} width = "200" />
-            <p>${rating} / 10</p>
-            <p>${review}</p>
-            `;
+            img2.src=`${url}`;
+            title2.innerText= `${title}`;
         }
     }
-    mainContainer.appendChild(spot1);
-    mainContainer.appendChild(spot2);
 }
