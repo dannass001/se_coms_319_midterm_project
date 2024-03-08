@@ -9,23 +9,28 @@ fetch("./vgReviews.json")
 .then(myReviews => loadReviews(myReviews));
 
 function loadReviews(myReviews){
-    var mainContainer = document.getElementById("reviews");
-
+    var container1 = document.getElementById("row1");
+    var container2 = document.getElementById("row2");
     for (let i=0; i<myReviews.reviews.length; i++){
         let title = myReviews.reviews[i].title;
-        let year = myReviews.reviews[i].year;
         let review = myReviews.reviews[i].review;
         let rating = myReviews.reviews[i].rating;
         let url = myReviews.reviews[i].url;
-
+        
         let division = document.createElement("div");
+        division.classList.add("col-lg-4");
         division.innerHTML = `
-        <h3>${title}</h3>
-        <p>${year}</p>
         <img src=${url} width = "200" />
+        <h2 class="fw-normal">${title}</h2>
         <p>${rating} / 10</p>
         <p>${review}</p>
         `;
-        mainContainer.appendChild(division);
+        if(i < 3){
+            console.log("1");
+            container1.appendChild(division);
+        }else{
+            console.log("2");
+            container2.appendChild(division);
+        }
     }
 }
