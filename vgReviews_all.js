@@ -4,7 +4,7 @@
     Date : March 7th, 2024
 */
 
-fetch("./vgReviews.json")
+fetch("./data.json")
 .then(response => response.json())
 .then(myReviews => loadReviews(myReviews));
 
